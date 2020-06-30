@@ -5,22 +5,40 @@
 
 <body>
     <h1>Survey analysis</h1>
-    <h2>Colors</h2>
+    <h2>How do you think the user interface could be improved?</h2>
     <ul>
     <% for (var i=0; i<results[0].length; i++){ %>
-        <li><%= results[0][i].color %> :  <%= results[0][i].count %></li>
+        <li><%= results[0][i].question5 %> :  <%= results[0][i].count %></li>
     <% } %>    
     </ul>
-    <h2>Fruits</h2>
+    <h2>I find it easy to share an article using Medium?</h2>
     <ul>
     <% for (var i=0; i<results[1].length; i++){ %>
-        <li><%= results[1][i].fruit %> :  <%= results[1][i].count %></li>
+        <li><%= results[1][i].question4 %> :  <%= results[1][i].count %></li>
     <% } %>    
     </ul>
-    <h2>Animals</h2>
+    <h2>Do you have any other comments?</h2>
     <ul>
     <% for (var i=0; i<results[2].length; i++){ %>
-        <li><%= results[2][i].animal %> :  <%= results[2][i].count %></li>
+        <li><%= results[2][i].question6 %> :  <%= results[2][i].count %></li>
+    <% } %>    
+    </ul>
+    <h2>I learned to use the website quickly</h2>
+    <ul>
+    <% for (var i=0; i<results[3].length; i++){ %>
+        <li><%= results[3][i].question1 %> :  <%= results[3][i].count %></li>
+    <% } %>    
+    </ul>
+    <h2>Which of the following can you find easily on the page?</h2>
+    <ul>
+    <% for (var i=0; i<results[4].length; i++){ %>
+        <li><%= results[4][i].question2 %> :  <%= results[4][i].count %></li>
+    <% } %>    
+    </ul>
+    <h2>How did you hear about Medium?</h2>
+    <ul>
+    <% for (var i=0; i<results[5].length; i++){ %>
+        <li><%= results[5][i].question3 %> :  <%= results[5][i].count %></li>
     <% } %>    
     </ul>
 </body>

@@ -4,39 +4,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    
-
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
   </head>
   
   <body>
 	
-	<div class="container-md p-3 my-3 border bg-dark text-white" id="survey">
-    <h1>Survey</h1>
+	<div id="survey">
+    <div>
+      <h1>Lab 1: Survey of a User Interface</h1>
+      <h5>Please complete the survey below to evaluate <a href="https://uxplanet.org/how-to-create-effective-user-surveys-1cea4b06ff76">this site</a>.</h5>
+      <img src="/images/image.PNG">
+    </div>
     <form>
-      <h2> What fruits(s) do you like? </h2>
-      I like:<br>
-      <input type="text" name="fruit" placeholder="fruit name..." required />
-      <br>
-      <br>
-      <h2> What color(s) do you like? </h2>
-	    I like:<br>
-		  <input type="checkbox" name="color" value="Red"> Red<br>
-		  <input type="checkbox" name="color" value="Green"> Green<br>
-      <input type="checkbox" name="color" value="Blue"> Blue<br>
-      <br>
-      <h2>What is your favorite animal?</h2>
-      I like:<br>
-      <select name="animal">
-			  <option value="Cat" selected="selected">Cat</option>
-			  <option value="Dog">Dog</option>
-			  <option value="Turtle">Turtle</option>
-      </select>
-      <br>
-      <br>
+      <div class="card">
+        <h6>I learned to use the website quickly</h6> 
+        <label><input type='radio' name='question1' value='Strongly Agree'>Strongly Agree</label>
+        <label><input type='radio' name='question1' value='Agree'>Agree</label>
+        <label><input type='radio' name='question1' value='Neutral'>Neutral</label>
+        <label><input type='radio' name='question1' value='Disagree'>Disagree</label>
+        <label><input type='radio' name='question1' value='Strongly Disagree'>Strongly Disagree</label>
+      </div>
+      <div class="card">
+        <h6>Which of the following can you find easily on the page?</h6> 
+        <label><input type='checkbox' name='question2' value='Author'>Author</label>
+        <label><input type='checkbox' name='question2' value='Publication date'>Publication date</label>
+        <label><input type='checkbox' name='question2' value='Search bar'>Search bar</label>
+        <label><input type='checkbox' name='question2' value='Notification button'>Notification button</label>
+        <label><input type='checkbox' name='question2' value='Estimated time to read article'>Estimated time to read article</label>
+      </div>
+      <div class="card">
+        <h6>How did you hear about Medium?</h6> 
+        <select name="question3">
+            <option value="Google Search">Google Search</option>
+            <option value="Friend">Friend</option>
+            <option value="Email">Email</option>
+            <option value="Other">Other</option>
+        </select>
+      </div>
+      <div class="card">
+        <h6>I find it easy to share an article using Medium?</h6> 
+        <ul class="likert">
+            <li> Very difficult </li>
+            <li><input type="radio" name='question4' value='Strongly Agree'/></li>
+            <li><input type="radio" name='question4' value='Agree'/></li>
+            <li><input type="radio" name='question4' value='Neutral'/></li>
+            <li><input type="radio" name='question4' value='Disagree'/></li>
+            <li><input type="radio" name='question4' value='Strongly Disagree'/></li>
+            <li> Very Easy </li>
+        </ul>
+      </div>
+      <div class="card">
+        <h6>How do you think the user interface could be improved?</h6> 
+        <input type='text' name="question5">
+      </div>
+      <div class="card">
+        <h6>Do you have any other comments?</h6> 
+        <input type='text' name="question6">
+      </div>
       <button type="submit" class="btn btn-warning" id="bb">Submit</button>
       <p id="thanks"></p>
     </form>
